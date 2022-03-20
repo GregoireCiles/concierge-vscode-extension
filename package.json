@@ -28,6 +28,13 @@
         "title": "Format import"
       }
     ],
+    "keybindings": [
+      {
+        "command": "concierge.format.import",
+        "key": "f10",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Concierge",
