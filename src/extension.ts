@@ -1,4 +1,5 @@
 import * as vscode from 'vscode'
+import Tasks from './tasks'
 import { Config } from './utilities'
 
 import Validation from './utilities/validation'
@@ -14,6 +15,8 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       if (Validation.supportedLanguage(textEditor.document.languageId)) {
+        Tasks(textEditor.document)
+
         if (Config.showInformationMessage) {
           window.showInformationMessage('Wow, you 🏄 so well!')
         }
