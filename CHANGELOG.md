@@ -10,4 +10,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - First release
 
 [Unreleased]: https://github.com/GregoireCiles/concierge-vscode-extension/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/GregoireCiles/concierge-vscode-extension/releases/tag/v0.0.1
+[1.0.0]: https://github.com/GregoireCiles/concierge-vscode-extension/releases/tag/v1.0.0
