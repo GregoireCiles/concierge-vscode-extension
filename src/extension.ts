@@ -15,7 +15,15 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       if (Validation.supportedLanguage(textEditor.document.languageId)) {
-        Tasks(textEditor.document)
+        const edits: vscode.TextEdit[] | undefined = Tasks(textEditor.document)
+
+        if (!edits) {
+          return
+        }
+
+        const edit: vscode.WorkspaceEdit = new vscode.WorkspaceEdit()
+        edit.set(textEditor.document.uri, edits)
+        vscode.workspace.applyEdit(edit)
 
         if (Config.showInformationMessage) {
           window.showInformationMessage('Wow, you 🏄 so well!')
