@@ -1,0 +1,50 @@
+{
+  "name": "concierge-vscode",
+  "displayName": "Concierge",
+  "description": "VSCode extension to help grouping and formatting the import as a wave.",
+  "version": "0.0.1",
+  "publisher": "gregoireciles",
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+		"format",
+		"snippets"
+	],
+  "activationEvents": [
+    "onCommand:concierge.format.import"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "concierge.format.import",
+        "category": "🌊 Concierge",
+        "title": "Format import"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run typescript",
+    "typescript": "tsc",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write .",
+    "watch:typescript": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/vscode": "^1.65.0",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.2"
+  }
+}

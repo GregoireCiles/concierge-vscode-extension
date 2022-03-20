@@ -1,0 +1,9 @@
+node_modules
+out
+.vscode
+.eslintrc.json
+package*.json
+tsconfig.json
+*.md
+*.html
+*.txt
