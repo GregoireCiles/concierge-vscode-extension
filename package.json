@@ -9,6 +9,7 @@
     "vscode": "^1.65.0"
   },
   "categories": [
+    "Formatters",
     "Other"
   ],
   "keywords": [
