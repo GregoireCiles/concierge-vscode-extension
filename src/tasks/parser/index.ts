@@ -1,18 +1,28 @@
 import { Range, TextDocument } from 'vscode'
 
+import Sorter from '../sorter'
 import { ImportType } from '../types'
+import Stringifier from '../stringifier'
+import { Config } from '../../utilities'
 import { importRegExp } from '../../utilities/regexp'
+import { getTabChars } from '../../utilities/functions'
 
 /**
  * A wrapper around parsing import.
  */
 class Parser {
+  protected static tabChars = getTabChars(Config.tabType, Config.tabSize)
+  protected static maxCount = Config.maxLineCount
+  protected static maxLength = Config.maxLineLength
+  protected static trailingComma = Config.trailingComma
+  protected static hasSemicolon = Config.hasSemicolon
+
   /**
    * Parsing destructed imports.
    *
    * @param source Represents a destructed import.
    */
-  private parseDestructiveImports(source: string | null): string[][] | null {
+  private static parseDestructiveImports(source: string | null): string[][] | null {
     if (typeof source === 'string') {
       return source
         .slice(1, -1)
@@ -30,7 +40,7 @@ class Parser {
    * @param document Represents a text document, such as a source file.
    * @returns an array of import parses.
    */
-  public parseImports(document: TextDocument): ImportType[] {
+  public static parseImports(document: TextDocument): ImportType[] {
     const source: string = document.getText()
     const imports: ImportType[] = []
 
@@ -52,6 +62,15 @@ class Parser {
         ),
       })
     }
+
+    imports.forEach((item) => {
+      if (item.destructed) {
+        item.destructed = item.destructed.sort((a, b) => Sorter.compareCaseInsensitive(a[0], b[0]))
+      }
+
+      const len = this.maxLength - (this.hasSemicolon ? 16 : 15) - item.path.length
+      item.names = Stringifier.names(item, this.tabChars, this.trailingComma, this.maxCount, len)
+    })
 
     return imports
   }
