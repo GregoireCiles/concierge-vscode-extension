@@ -1,4 +1,5 @@
 import * as vscode from 'vscode'
+import { Config } from './utilities'
 
 import Validation from './utilities/validation'
 
@@ -13,7 +14,9 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       if (Validation.supportedLanguage(textEditor.document.languageId)) {
-        window.showInformationMessage('Wow, you 🏄 so well!')
+        if (Config.showInformationMessage) {
+          window.showInformationMessage('Wow, you 🏄 so well!')
+        }
       }
     })
   )

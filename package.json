@@ -26,7 +26,18 @@
         "category": "🌊 Concierge",
         "title": "Format import"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Concierge",
+      "properties": {
+        "concierge.showInformationMessage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Display a message when formatting is finished with success."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run typescript",
