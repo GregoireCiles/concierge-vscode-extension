@@ -9,6 +9,7 @@
     "vscode": "^1.65.0"
   },
   "categories": [
+    "Formatters",
     "Other"
   ],
   "keywords": [
@@ -26,7 +27,127 @@
         "category": "🌊 Concierge",
         "title": "Format import"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "concierge.format.import",
+        "key": "f10",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Concierge",
+      "properties": {
+        "concierge.format.showInformationMessage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Display a message when formatting is finished with success."
+        },
+        "concierge.format.tabType": {
+          "enum": [
+            "space",
+            "tab"
+          ],
+          "default": "space",
+          "description": "Define the character of tab"
+        },
+        "concierge.format.tabSize": {
+          "type": "number",
+          "default": 2,
+          "description": "Define the size of tab"
+        },
+        "concierge.format.quotemark": {
+          "enum": [
+            "single",
+            "double"
+          ],
+          "default": "single",
+          "description": "Define type of quotes"
+        },
+        "concierge.format.trailingComma": {
+          "enum": [
+            "none",
+            "multiLine",
+            "always"
+          ],
+          "default": "multiLine",
+          "description": "Add trailing comma or not"
+        },
+        "concierge.format.semicolon": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add semicolon or not"
+        },
+        "concierge.format.maxLineCount": {
+          "type": "number",
+          "default": 10,
+          "description": "Define number of named import per line"
+        },
+        "concierge.format.maxLineLength": {
+          "type": "number",
+          "default": 120,
+          "description": "Define charater count per line"
+        },
+        "concierge.format.emptyLines": {
+          "type": "number",
+          "default": 1,
+          "description": "Define number of empty lines after group"
+        },
+        "concierge.format.lastEmptyLines": {
+          "type": "number",
+          "default": 1,
+          "description": "Define number of empty lines after last group"
+        },
+        "concierge.format.groups": {
+          "type": "array",
+          "default": [
+            {
+              "names": "^$"
+            },
+            {
+              "path": "^[a-zA-Z0-9]+$"
+            },
+            {
+              "path": "^[^.@]|@[^/]",
+              "groups": [
+                {
+                  "names": "^\\*",
+                  "path": "^react|vue|@"
+                },
+                {
+                  "names": "^\\*"
+                },
+                {
+                  "names": "^[^,{]+$"
+                },
+                {
+                  "names": "^[^{]"
+                }
+              ]
+            },
+            {
+              "path": "^@/",
+              "groups": [
+                {
+                  "names": "^\\*"
+                },
+                {
+                  "names": "^[^,{]+$"
+                },
+                {
+                  "names": "^[^{]"
+                }
+              ]
+            },
+            {
+              "path": "^(..)|(.)\/"
+            }
+          ],
+          "description": "Define rules of group"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run typescript",
