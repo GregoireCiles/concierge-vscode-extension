@@ -35,6 +35,16 @@
         "when": "editorTextFocus && !editorReadonly"
       }
     ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./src/snippets/output/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/output/javascript.json"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Concierge",
@@ -151,7 +161,8 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run typescript",
-    "typescript": "tsc",
+    "typescript": "tsc && npm run snippets",
+    "snippets": "node ./out/snippets/combine.js",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
     "watch:typescript": "tsc --watch"

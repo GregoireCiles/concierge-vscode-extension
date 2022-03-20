@@ -1,0 +1,27 @@
+{
+  "javascript: console": {
+    "body": "console.${1|dir,error,log,warn|}($0)",
+    "description": "Javascript: console",
+    "prefix": "console"
+  },
+  "javascript: console.log": {
+    "body": "console.log(${1:msg})",
+    "description": "Javascript: console.log",
+    "prefix": "log"
+  },
+  "javascript: console.error": {
+    "body": "console.error(${1:msg})",
+    "description": "Javascript: console.error",
+    "prefix": ["log-error", "error"]
+  },
+  "javascript: console.warn": {
+    "body": "console.warn(${1:msg})",
+    "description": "Javascript: console.warn",
+    "prefix": ["log-warn", "warn"]
+  },
+  "javascript: console.dir": {
+    "body": "console.dir(${1:msg}, ${2:{ depth: ${3:null} }})",
+    "description": "Javascript: console.dir",
+    "prefix": ["log-dir", "dir"]
+  }
+}
