@@ -1,18 +1,12 @@
 /**
- * Ensure that the language identifier associated with this document is supported.
- *
- * @param languageId The identifier of the language associated with this document.
+ * Set of validation rules available.
  */
-export function isSupportedLanguages(languageId: string): boolean {
-  return (
-    languageId === 'typescript' ||
-    languageId === 'typescriptreact' ||
-    languageId === 'javascript' ||
-    languageId === 'javascriptreact'
-  )
-}
-
 class Validation {
+  /**
+   * Ensure that the language identifier associated with this document is supported.
+   *
+   * @param languageId The identifier of the language associated with this document.
+   */
   public static supportedLanguage(languageId: string): boolean {
     return (
       languageId === 'typescript' ||
