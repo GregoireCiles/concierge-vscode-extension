@@ -54,4 +54,5 @@ VSCode extension to help grouping and formatting the import as a wave.
 
 ## Release Notes
 
-> None for now.
+> ### 1.0.0
+> - First release

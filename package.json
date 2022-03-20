@@ -2,7 +2,7 @@
   "name": "concierge-vscode",
   "displayName": "Concierge",
   "description": "VSCode extension to help grouping and formatting the import as a wave.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "gregoireciles",
   "icon": "assets/icon.png",
   "engines": {
