@@ -3,7 +3,15 @@ import { Range, TextDocument } from 'vscode'
 import { ImportType } from '../types'
 import { importRegExp } from '../../utilities/regexp'
 
+/**
+ * A wrapper around parsing import.
+ */
 class Parser {
+  /**
+   * Parsing destructed imports.
+   *
+   * @param source Represents a destructed import.
+   */
   private parseDestructiveImports(source: string | null): string[][] | null {
     if (typeof source === 'string') {
       return source
@@ -16,6 +24,12 @@ class Parser {
     return null
   }
 
+  /**
+   * Parsing imports.
+   *
+   * @param document Represents a text document, such as a source file.
+   * @returns an array of import parses.
+   */
   public parseImports(document: TextDocument): ImportType[] {
     const source: string = document.getText()
     const imports: ImportType[] = []
