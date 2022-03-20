@@ -1,5 +1,7 @@
 import * as vscode from 'vscode'
 
+import Validation from './utilities/validation'
+
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand('concierge.format.import', () => {
@@ -10,7 +12,9 @@ export function activate(context: vscode.ExtensionContext) {
         return
       }
 
-      window.showInformationMessage('Wow, you 🏄 so well!')
+      if (Validation.supportedLanguage(textEditor.document.languageId)) {
+        window.showInformationMessage('Wow, you 🏄 so well!')
+      }
     })
   )
 }
