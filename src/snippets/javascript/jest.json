@@ -53,5 +53,23 @@
     ],
     "description": "Jest: template for mock a function",
     "prefix": ["jest-mock-function", "mock-function", "mockfn"]
+  },
+  "jest: assert fail": {
+    "body": [
+      "it('Should throw an error \"${1:expectedError}\" when ${2:operator}', () => {",
+      "  // arrange",
+      "  // act",
+      "  let result;",
+      "  try {",
+      "    result = ${3:functionToCheck}",
+      "  } catch (error) {",
+      "    result = error;",
+      "  }",
+      "  // assert",
+      "  expect(result).toStrictEqual(new Error('${1:expectedError}'));",
+      "});"
+    ],
+    "description": "Jest: Throw a failure.",
+    "prefix": ["jest-assert-fail", "assert-fail"]
   }
 }
