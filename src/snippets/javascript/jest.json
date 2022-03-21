@@ -33,5 +33,15 @@
     ],
     "description": "Jest: describe & it block",
     "prefix": ["jest-describe-it", "desc-it"]
+  },
+  "jest: clean mocks": {
+    "body": [
+      "beforeAll(() => {",
+      "  jest.clearAllMocks();",
+      "  jest.resetAllMocks();",
+      "});"
+    ],
+    "description": "Jest: clean mocks",
+    "prefix": ["jest-clean-mocks", "clean-mocks"]
   }
 }
