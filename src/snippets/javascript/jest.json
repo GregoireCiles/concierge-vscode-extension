@@ -1,0 +1,11 @@
+{
+  "jest: describe": {
+    "body": [
+      "describe('${1:example}', () => {",
+      "$2",
+      "});"
+    ],
+    "description": "Jest: describe block",
+    "prefix": ["describe", "desc"]
+  }
+}
