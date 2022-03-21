@@ -7,5 +7,16 @@
     ],
     "description": "Jest: describe block",
     "prefix": ["describe", "desc"]
+  },
+  "jest: it": {
+    "body": [
+      "it('Should ${1:return an example with success}', () => {",
+      "  // arrange",
+      "  // act",
+      "  // assert",
+      "});"
+    ],
+    "description": "Jest: it block",
+    "prefix": ["jest-it", "it"]
   }
 }
