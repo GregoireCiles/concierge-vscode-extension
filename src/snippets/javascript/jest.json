@@ -43,5 +43,15 @@
     ],
     "description": "Jest: clean mocks",
     "prefix": ["jest-clean-mocks", "clean-mocks"]
+  },
+  "jest: mock function": {
+    "body": [
+      "const mock${1:Example} = jest.fn().mockImplementation(${1:Example});",
+      "const result = mock${1:Example}($2);",
+      "expect(result).toStrictEqual($3);",
+      "expect(mock${1:Example}).toHaveBeenNthCalledWith(1, $4);"
+    ],
+    "description": "Jest: template for mock a function",
+    "prefix": ["jest-mock-function", "mock-function", "mockfn"]
   }
 }
