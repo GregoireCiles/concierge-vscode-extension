@@ -39,19 +39,19 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./src/snippets/output/javascript.json"
+        "path": "./out/snippets/javascript.json"
       },
       {
         "language": "typescript",
-        "path": "./src/snippets/output/javascript.json"
+        "path": "./out/snippets/javascript.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./src/snippets/output/javascript.json"
+        "path": "./out/snippets/javascript.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./src/snippets/output/javascript.json"
+        "path": "./out/snippets/javascript.json"
       }
     ],
     "configuration": {
