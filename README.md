@@ -7,6 +7,7 @@ VSCode extension to help grouping and formatting the import as a wave.
 - [x] Sort import
 - [x] Group by Regexp, support child groups
 - [x] Configuration with tab style, quotemark, trailing comma, semicolon...
+- [x] Snippets to save your life with console.log and jest
 
 ## Extension Settings
 
