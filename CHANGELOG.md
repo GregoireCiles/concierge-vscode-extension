@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.1.1] - 2022-03-22
+- Change output directory for snippets
+
 ## [1.1.0] - 2022-03-22
 - Combine snippets groups into single json file
 - Adding snippets
@@ -27,5 +30,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - First release
 
 [Unreleased]: https://github.com/GregoireCiles/concierge-vscode-extension/compare/v1.0.0...HEAD
+[1.1.1]: https://github.com/GregoireCiles/concierge-vscode-extension/releases/tag/v1.1.1
 [1.1.0]: https://github.com/GregoireCiles/concierge-vscode-extension/releases/tag/v1.1.0
 [1.0.0]: https://github.com/GregoireCiles/concierge-vscode-extension/releases/tag/v1.0.0

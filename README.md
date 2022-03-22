@@ -76,6 +76,9 @@ VSCode extension to help grouping and formatting the import as a wave.
 
 ## Release Notes
 
+> ### 1.1.1 - 2022-03-22
+> - Change output directory for snippets
+
 > ### 1.1.0 - 2022-03-22
 > - Combine snippets groups into single json file
 > - Adding snippets
