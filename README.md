@@ -7,6 +7,7 @@ VSCode extension to help grouping and formatting the import as a wave.
 - [x] Sort import
 - [x] Group by Regexp, support child groups
 - [x] Configuration with tab style, quotemark, trailing comma, semicolon...
+- [x] Combine snippets groups into single json file
 - [x] Snippets to save your life with console.log and jest
 
 ## Extension Settings
@@ -75,5 +76,22 @@ VSCode extension to help grouping and formatting the import as a wave.
 
 ## Release Notes
 
-> ### 1.0.0
+> ### 1.1.0 - 2022-03-22
+> - Combine snippets groups into single json file
+> - Adding snippets
+>   - javascript snippets
+>     - javascript: console, prefix: `console`
+>     - javascript: console.log, prefix: `log`
+>     - javascript: console.error, prefix: `log-error` or `error`
+>     - javascript: console.warn, prefix: `log-warn` or `warn`
+>     - javascript: console.dir, prefix: `log-dir` or `dir`
+>   - jest snippets
+>     - jest: describe, prefix: `describe` or `desc`
+>     - jest: it, prefix: `jest-it` or `it`
+>     - jest: describe & it, prefix: `jest-describe-it` or `desc-it`
+>     - jest: clean mocks, prefix: `jest-clean-mocks` or `clean-mocks`
+>     - jest: mock function, prefix: `jest-mock-function` or `mock-function` or `mockfn`
+>     - jest: assert fail, prefix: `jest-assert-fail` or `assert-fail`
+
+> ### 1.0.0 - 2022-03-20
 > - First release
