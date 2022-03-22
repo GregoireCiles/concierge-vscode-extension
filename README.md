@@ -48,6 +48,26 @@ VSCode extension to help grouping and formatting the import as a wave.
   ]
   ```
 
+## Extension Snippets
+
+### JavaScript, Typescript, React
+
+#### Console.log
+
+- javascript: console, prefix: `console`
+- javascript: console.log, prefix: `log`
+- javascript: console.error, prefix: `log-error` or `error`
+- javascript: console.warn, prefix: `log-warn` or `warn`
+- javascript: console.dir, prefix: `log-dir` or `dir`
+
+#### Jest
+
+- jest: describe, prefix: `describe` or `desc`
+- jest: it, prefix: `jest-it` or `it`
+- jest: describe & it, prefix: `jest-describe-it` or `desc-it`
+- jest: clean mocks, prefix: `jest-clean-mocks` or `clean-mocks`
+- jest: mock function, prefix: `jest-mock-function` or `mock-function` or `mockfn`
+- jest: assert fail, prefix: `jest-assert-fail` or `assert-fail`
 
 ## Known Issues
 
