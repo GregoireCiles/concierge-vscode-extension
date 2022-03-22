@@ -9,6 +9,7 @@
     "vscode": "^1.65.0"
   },
   "categories": [
+    "Snippets",
     "Formatters",
     "Other"
   ],
@@ -33,6 +34,24 @@
         "command": "concierge.format.import",
         "key": "f10",
         "when": "editorTextFocus && !editorReadonly"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./src/snippets/output/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/output/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/output/javascript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/output/javascript.json"
       }
     ],
     "configuration": {
@@ -151,7 +170,8 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run typescript",
-    "typescript": "tsc",
+    "typescript": "tsc && npm run snippets",
+    "snippets": "node ./out/snippets/combine.js",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
     "watch:typescript": "tsc --watch"
